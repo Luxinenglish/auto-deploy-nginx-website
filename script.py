@@ -3,9 +3,13 @@
 import os
 
 def create_nginx_site_conf():
-        os.system(f"lsudo apt update")
-    os.system(f"sudo apt install python3-pip -y")
-    os.system(f"sudo pip3 install certbot certbot-nginx")
+os.system("sudo apt update")
+
+# Installation de pip
+os.system("sudo apt install python3-pip -y")
+
+# Installation de certbot et certbot-nginx via pip
+os.system("sudo pip3 install certbot certbot-nginx")
 
     # Demander les informations nécessaires
     domain_name = input("Entrez le nom de domaine principal (ex : pixelserver.fr) : ")
